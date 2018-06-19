@@ -142,13 +142,32 @@
 
 {% block page_scripts %}
 <script>
+  rangy.init();
+  var highlighter = rangy.createHighlighter();
   var CommentButton = MediumEditor.Extension.extend({
     name: 'comment',
     init: function () {
-      this.classApplier = rangy.createClassApplier('comment', {
-        elementTagName: 'mark',
-        normalize: true
-      });
+
+      highlighter.addClassApplier(rangy.createClassApplier("comment", {
+        ignoreWhiteSpace: true,
+        elementTagName: "mark",
+        elementProperties: {
+            href: "#",
+            onclick: function() {
+              var highlight = highlighter.getHighlightForElement(this);
+
+              if (window.confirm("Delete this note (ID " + highlight.id + ")?")) {
+                  highlighter.removeHighlights( [highlight] );
+              }
+              return false;
+            }
+        }
+      }));
+
+      // this.classApplier = rangy.createClassApplier('comment', {
+      //   elementTagName: 'mark',
+      //   normalize: true
+      // });
 
       this.button = this.document.createElement('button');
       this.button.classList.add('medium-editor-action');
@@ -161,7 +180,15 @@
     },
 
     handleClick: function (event) {
-      this.classApplier.toggleSelection();
+      highlighter.highlightSelection('comment');
+      alert('create a comment box');
+
+    //  this.classApplier.toggleSelection();
+    //  var sel = rangy.getSelection();
+    //   console.log(sel);
+    //   console.log(sel.anchorNode.nextSibling);
+    //   console.log(sel.anchorNode.parentNode);
+    //   console.log(sel.anchorNode.parentElement);
 
       // Ensure the editor knows about an html change so watchers are notified
       // ie: <textarea> elements depend on the editableInput event to stay synchronized
@@ -169,7 +196,7 @@
     }
   });
 
-  rangy.init();
+
 
   var HighlightButton = MediumEditor.Extension.extend({
     name: 'highlight',

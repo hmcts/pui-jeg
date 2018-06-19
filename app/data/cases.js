@@ -9,7 +9,7 @@ module.exports = [
     typeId: types.pip.id,
     status: 'Deadline expired',
     applicationDate: moment('2017-11-20 13:01'),
-    lastAction: moment('2018-01-11-25 16:48'),
+    lastAction: moment('2018-01-25 16:48'),
     urgent: true,
     tribunalCentre: 'Fox Court',
     requirements: 'Assisted Digital support requested',

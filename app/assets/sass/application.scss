@@ -15,3 +15,11 @@ $path: "/public/images/";
 mark.comment {
   background-color: $govuk-orange;
 }
+
+.medium-toolbar-arrow-under:after {
+  border-color: #2f1e07 transparent transparent;
+}
+
+.medium-toolbar-arrow-over:before {
+  border-color: transparent transparent #2f1e07 ;
+}
