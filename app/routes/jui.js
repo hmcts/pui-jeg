@@ -61,7 +61,7 @@ router.get('/app/dashboard', (req, res) => {
 		var cells = [];
 
 		cells.push({
-			html : '<a href="/app/cases/' + c.id + '">'+ c.id + '</a>' + (c.urgent ? ' <span class="jui-status  jui-status--urgent  govuk-!-ml-r1">Urgent</span> ' : '')
+			html : '<a href="/app/cases/' + c.id + '">'+ c.id + '</a>' + (c.urgent ? ' <span class="jui-status  jui-status--urgent  govuk-!-margin-left-1">Urgent</span> ' : '')
 		});
 
 		cells.push({ html: helpers.getPartiesLine(c)	});
@@ -84,7 +84,7 @@ router.get('/app/dashboard', (req, res) => {
 			var cells = [];
 
 			cells.push({
-				html : '<a href="/app/cases/' + c.id + '">'+ c.id +'</a>' + ' <span class="jui-status  jui-status--new  govuk-!-ml-r1">New</span>'
+				html : '<a href="/app/cases/' + c.id + '">'+ c.id +'</a>' + ' <span class="jui-status  jui-status--new  govuk-!-margin-left-1">New</span>'
 			});
 
 			cells.push({ html: helpers.getPartiesLine(c)

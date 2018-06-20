@@ -42,7 +42,7 @@
               <!--<p>You have written {{draftRound.questions.length}} question(s).</p>
               <p>You can add more questions, edit the existing questions or send all questions to the appellant.</p>-->
 
-              <div class="jui-questions govuk-!-mb-r6">
+              <div class="jui-questions govuk-!-margin-bottom-6">
                 {% for question in draftRound.questions %}
                   <div class="jui-questions__item">
                     <h3 class="jui-questions__subject"><a href="/app/cases/{{casenav.id}}/questions/{{question.id}}">{{question.subject}}</a></h3>
@@ -55,7 +55,7 @@
                 {{ govukButton({
                   "text": "Add questions",
                   "href": createQuestionsLink.href,
-                  "classes": "jui-button--secondary  govuk-!-mb-r4"
+                  "classes": "jui-button--secondary  govuk-!-margin-bottom-4"
                 }) }}
               </div>
 
@@ -94,7 +94,7 @@
                   <p><b>The appellant has not answered all the question in time.</b></p>
                 {% endif %}
               {% endif %}
-              <div class="jui-questions govuk-!-mb-r6">
+              <div class="jui-questions govuk-!-margin-bottom-6">
                 {% for question in round.questions %}
                   <div class="jui-questions__item">
 

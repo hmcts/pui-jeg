@@ -14,7 +14,7 @@ function viewCaseSummary(req, res) {
 	};
 
 	// Case details
-	pageObject.detailsRows.push([{ html: 'Case number' },	{ html: _case.id + (_case.urgent ? ' <span class="jui-status  jui-status--urgent  govuk-!-ml-r1">Urgent</span> ' : '') }]);
+	pageObject.detailsRows.push([{ html: 'Case number' },	{ html: _case.id + (_case.urgent ? ' <span class="jui-status  jui-status--urgent  govuk-!-margin-left-1">Urgent</span> ' : '') }]);
 	pageObject.detailsRows.push([{ html: 'Case type' },	{ html: helpers.getCaseTypeLabel(_case) }]);
 	pageObject.detailsRows.push([{ html: 'Case status' },	{ html: _case.status }]);
 	pageObject.detailsRows.push([{ html: 'Reason for divorce' }, { html: _case.reason }]);

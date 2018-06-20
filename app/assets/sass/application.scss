@@ -3,7 +3,7 @@
 $path: "/public/images/";
 
 // Import GOV.UK Frontend
-@import "@govuk-frontend/frontend/all";
+@import "govuk-frontend/all";
 
 // Patterns that aren"t in GOV.UK Frontend
 @import "patterns/check-your-answers";
@@ -13,7 +13,7 @@ $path: "/public/images/";
 @import "jui/all";
 
 mark.comment {
-  background-color: $govuk-orange;
+  background-color: govuk-colour(orange);
 }
 
 .medium-toolbar-arrow-under:after {

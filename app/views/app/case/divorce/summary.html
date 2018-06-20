@@ -20,10 +20,10 @@
 
       <div class="govuk-grid-column-one-half">
 
-        <h2 class="gov-heading-s  govuk-!-mb-r2">Case details</h2>
+        <h2 class="gov-heading-s  govuk-!-margin-bottom-2">Case details</h2>
 
         {{ govukTable({
-          "classes": "govuk-!-f-16  govuk-!-mb-r7  jui-table  jui-table--fixed",
+          "classes": "govuk-!-font-size-16  govuk-!-margin-bottom-7  jui-table  jui-table--fixed",
           "firstCellIsHeader": true,
           "rows": detailsRows
         }) }}
@@ -32,10 +32,10 @@
 
       <div class="govuk-grid-column-one-half">
 
-        <h2 class="gov-heading-s  govuk-!-mb-r2">Representatives</h2>
+        <h2 class="gov-heading-s  govuk-!-margin-bottom-2">Representatives</h2>
 
         {{ govukTable({
-          "classes": "govuk-!-f-16  govuk-!-mb-r7  jui-table  jui-table--fixed",
+          "classes": "govuk-!-font-size-16  govuk-!-margin-bottom-7  jui-table  jui-table--fixed",
           "firstCellIsHeader": true,
           "rows": representativesRows
         }) }}
@@ -48,11 +48,11 @@
 
       <div class="govuk-grid-column-two-thirds">
 
-        <h2 class="gov-heading-s  govuk-!-mb-r2">Recent events</h2>
+        <h2 class="gov-heading-s  govuk-!-margin-bottom-2">Recent events</h2>
 
         {% if recentEvents.length %}
           {{juiTimeline({
-            "classes": "govuk-!-mb-r7",
+            "classes": "govuk-!-margin-bottom-7",
             "isPageSpecific": false,
             "events": recentEvents
           })}}
