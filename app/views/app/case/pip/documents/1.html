@@ -152,15 +152,12 @@
         ignoreWhiteSpace: true,
         elementTagName: "mark",
         elementProperties: {
-            href: "#",
-            onclick: function() {
-              var highlight = highlighter.getHighlightForElement(this);
-
-              if (window.confirm("Delete this note (ID " + highlight.id + ")?")) {
-                  highlighter.removeHighlights( [highlight] );
-              }
-              return false;
+          onclick: function(e) {
+            var highlight = highlighter.getHighlightForElement(this);
+            if (window.confirm("Delete this note (ID " + highlight.id + ")?")) {
+              highlighter.removeHighlights( [highlight] );
             }
+          }
         }
       }));
 
@@ -179,20 +176,25 @@
       return this.button;
     },
 
-    handleClick: function (event) {
-      highlighter.highlightSelection('comment');
-      alert('create a comment box');
+    handleClick: function (e) {
 
-    //  this.classApplier.toggleSelection();
-    //  var sel = rangy.getSelection();
-    //   console.log(sel);
-    //   console.log(sel.anchorNode.nextSibling);
-    //   console.log(sel.anchorNode.parentNode);
-    //   console.log(sel.anchorNode.parentElement);
+      var sel = rangy.getSelection();
+      if(sel.focusNode.parentNode.classList.contains('comment')) {
+        var highlight = highlighter.getHighlightForElement(sel.focusNode.parentNode);
+        highlighter.removeHighlights( [highlight] );
+      } else {
+        highlighter.highlightSelection('comment');
+        var dialog = window.prompt('What’s your comment?');
+      }
+
+      console.log(this);
 
       // Ensure the editor knows about an html change so watchers are notified
       // ie: <textarea> elements depend on the editableInput event to stay synchronized
       this.base.checkContentChanged();
+
+      // var sel = rangy.getSelection();
+      // console.log(sel);
     }
   });
 
