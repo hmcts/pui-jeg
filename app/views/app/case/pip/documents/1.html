@@ -187,8 +187,6 @@
         var dialog = window.prompt('What’s your comment?');
       }
 
-      console.log(this);
-
       // Ensure the editor knows about an html change so watchers are notified
       // ie: <textarea> elements depend on the editableInput event to stay synchronized
       this.base.checkContentChanged();
