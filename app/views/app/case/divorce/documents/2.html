@@ -1,185 +1,143 @@
-{% extends "layouts/admin/base.html" %}
+{% extends "layouts/admin/casefile.html" %}
 
-{% set casenavId = "documents" %}
+{% block file_content %}
 
-{% block page_title %}Documents - Judicial UI prototype{% endblock %}
+  <div class="jui-casefile-page-content" data-page="1">
 
-{% block content %}
+    <div class="jui-casefile-page-head">
+      <img src="/public/images/logo-hmcts.svg" alt="HM Courts &amp; Tribunals Service">
+    </div>
 
-{% include "includes/casebar.html" %}
+    <div class="jui-casefile-page-body">
 
-<div class="jui-width-container">
+      <h2 class="govuk-heading-l">Application for decree nisi</h2>
 
-  <main class="govuk-main-wrapper" role="main">
+      <p class="govuk-body">David Francis is applying to the court for a decree of divorce from Susan Francis.</p>
 
-    {% include "includes/secondary-nav.html" %}
+      <h4>Issued</h4>
+      <p class="govuk-!-margin-top-0">18 February 2018</p>
 
-    <h1 class="govuk-heading-l">Case file</h1>
+      <h4>Case number</h4>
+      <p class="govuk-!-margin-top-0">BV18D00150</p>
 
-    <div class="jui-casefile  govuk-!-margin-bottom-6">
+      <h4>Petitioner</h4>
+      <p class="govuk-!-margin-top-0">David Francis</p>
 
-      <div class="jui-casefile-files">
+      <h4>Respondent</h4>
+      <p class="govuk-!-margin-top-0">Susan Francis</p>
 
-        <ul class="jui-casefile-list">
-          <li><a href="/app/cases/{{casenav.id}}/casefile/1">A. Key facts</a></li>
-          <li><a href="/app/cases/{{casenav.id}}/casefile/2" aria-current="true">B. Applicant</a>
-            <ul>
-              <li><a href="#" aria-current="true">Application for decree nisi</a></li>
-              <li><a href="#">Petition for divorce</a></li>
-              <li><a href="#">Marriage certificate</a></li>
-            </ul>
-          </li>
-          <li><a href="#">C. Respondent</a></li>
-        </ul>
+      <h3 class="govuk-heading-m  govuk-!-margin-top-6">About the marriage</h3>
 
-      </div>
+      <h4>Who the marriage is between</h4>
+      <p class="govuk-!-margin-top-0">David Francis and Susan Francis (as shown on the marriage certificate)</p>
 
-      <div class="jui-casefile-page">
+      <h4>Where the marriage took place</h4>
+      <p class="govuk-!-margin-top-0">London, England, United Kingdom</p>
 
-        <div class="jui-casefile-page-content" data-page="1">
+      <h4>Date of marriage</h4>
+      <p class="govuk-!-margin-top-0">1 January 2014 (4 years 3 months)</p>
 
-          <div class="jui-casefile-page-head">
-            <img src="/public/images/logo-hmcts.svg" alt="HM Courts &amp; Tribunals Service">
-          </div>
+      <h3 class="govuk-heading-m  govuk-!-margin-top-6">Why the court can deal with the case (jurisdiction)</h3>
 
-          <div class="jui-casefile-page-body">
+      <p>The applicant and respondent are habitually resident in England and Wales.</p>
 
-            <h2 class="govuk-heading-l">Application for decree nisi</h2>
-
-            <p class="govuk-body">David Francis is applying to the court for a decree of divorce from Susan Francis.</p>
-
-            <h4>Issued</h4>
-            <p class="govuk-!-margin-top-0">18 February 2018</p>
-
-            <h4>Case number</h4>
-            <p class="govuk-!-margin-top-0">BV18D00150</p>
-
-            <h4>Petitioner</h4>
-            <p class="govuk-!-margin-top-0">David Francis</p>
-
-            <h4>Respondent</h4>
-            <p class="govuk-!-margin-top-0">Susan Francis</p>
-
-            <h3 class="govuk-heading-m  govuk-!-margin-top-6">About the marriage</h3>
-
-            <h4>Who the marriage is between</h4>
-            <p class="govuk-!-margin-top-0">David Francis and Susan Francis (as shown on the marriage certificate)</p>
-
-            <h4>Where the marriage took place</h4>
-            <p class="govuk-!-margin-top-0">London, England, United Kingdom</p>
-
-            <h4>Date of marriage</h4>
-            <p class="govuk-!-margin-top-0">1 January 2014 (4 years 3 months)</p>
-
-            <h3 class="govuk-heading-m  govuk-!-margin-top-6">Why the court can deal with the case (jurisdiction)</h3>
-
-            <p>The applicant and respondent are habitually resident in England and Wales.</p>
-
-            <h4>Other court cases that could affect juristiction</h4>
-            <p class="govuk-!-margin-top-0">There are no other ongoing, completed or abandoned court cases related to the marriage, property or children.</p>
-
-          </div>
-
-        </div>
-
-        <div class="jui-casefile-page-content" data-page="2">
-
-          <div class="jui-casefile-page-head">
-            <img src="/public/images/logo-hmcts.svg" alt="HM Courts &amp; Tribunals Service">
-          </div>
-
-          <div class="jui-casefile-page-body">
-
-            <h2 class="govuk-heading-l">Application for decree nisi</h2>
-
-            <p class="govuk-body">David Francis is applying to the court for a decree of divorce from Susan Francis.</p>
-
-            <h4>Issued</h4>
-            <p class="govuk-!-margin-top-0">18 February 2018</p>
-
-            <h4>Case number</h4>
-            <p class="govuk-!-margin-top-0">BV18D00150</p>
-
-            <h4>Petitioner</h4>
-            <p class="govuk-!-margin-top-0">David Francis</p>
-
-            <h4>Respondent</h4>
-            <p class="govuk-!-margin-top-0">Susan Francis</p>
-
-            <h3 class="govuk-heading-m  govuk-!-margin-top-6">About the marriage</h3>
-
-            <h4>Who the marriage is between</h4>
-            <p class="govuk-!-margin-top-0">David Francis and Susan Francis (as shown on the marriage certificate)</p>
-
-            <h4>Where the marriage took place</h4>
-            <p class="govuk-!-margin-top-0">London, England, United Kingdom</p>
-
-            <h4>Date of marriage</h4>
-            <p class="govuk-!-margin-top-0">1 January 2014 (4 years 3 months)</p>
-
-            <h3 class="govuk-heading-m  govuk-!-margin-top-6">Why the court can deal with the case (jurisdiction)</h3>
-
-            <p>The applicant and respondent are habitually resident in England and Wales.</p>
-
-            <h4>Other court cases that could affect juristiction</h4>
-            <p class="govuk-!-margin-top-0">There are no other ongoing, completed or abandoned court cases related to the marriage, property or children.</p>
-
-          </div>
-
-        </div>
-
-        <div class="jui-casefile-page-content" data-page="3">
-
-          <div class="jui-casefile-page-head">
-            <img src="/public/images/logo-hmcts.svg" alt="HM Courts &amp; Tribunals Service">
-          </div>
-
-          <div class="jui-casefile-page-body">
-
-            <h2 class="govuk-heading-l">Application for decree nisi</h2>
-
-            <p class="govuk-body">David Francis is applying to the court for a decree of divorce from Susan Francis.</p>
-
-            <h4>Issued</h4>
-            <p class="govuk-!-margin-top-0">18 February 2018</p>
-
-            <h4>Case number</h4>
-            <p class="govuk-!-margin-top-0">BV18D00150</p>
-
-            <h4>Petitioner</h4>
-            <p class="govuk-!-margin-top-0">David Francis</p>
-
-            <h4>Respondent</h4>
-            <p class="govuk-!-margin-top-0">Susan Francis</p>
-
-            <h3 class="govuk-heading-m  govuk-!-margin-top-6">About the marriage</h3>
-
-            <h4>Who the marriage is between</h4>
-            <p class="govuk-!-margin-top-0">David Francis and Susan Francis (as shown on the marriage certificate)</p>
-
-            <h4>Where the marriage took place</h4>
-            <p class="govuk-!-margin-top-0">London, England, United Kingdom</p>
-
-            <h4>Date of marriage</h4>
-            <p class="govuk-!-margin-top-0">1 January 2014 (4 years 3 months)</p>
-
-            <h3 class="govuk-heading-m  govuk-!-margin-top-6">Why the court can deal with the case (jurisdiction)</h3>
-
-            <p>The applicant and respondent are habitually resident in England and Wales.</p>
-
-            <h4>Other court cases that could affect juristiction</h4>
-            <p class="govuk-!-margin-top-0">There are no other ongoing, completed or abandoned court cases related to the marriage, property or children.</p>
-
-          </div>
-
-        </div>
-
-      </div>
+      <h4>Other court cases that could affect juristiction</h4>
+      <p class="govuk-!-margin-top-0">There are no other ongoing, completed or abandoned court cases related to the marriage, property or children.</p>
 
     </div>
 
-  </main>
+  </div>
 
-</div>
+  <div class="jui-casefile-page-content" data-page="2">
+
+    <div class="jui-casefile-page-head">
+      <img src="/public/images/logo-hmcts.svg" alt="HM Courts &amp; Tribunals Service">
+    </div>
+
+    <div class="jui-casefile-page-body">
+
+      <h2 class="govuk-heading-l">Application for decree nisi</h2>
+
+      <p class="govuk-body">David Francis is applying to the court for a decree of divorce from Susan Francis.</p>
+
+      <h4>Issued</h4>
+      <p class="govuk-!-margin-top-0">18 February 2018</p>
+
+      <h4>Case number</h4>
+      <p class="govuk-!-margin-top-0">BV18D00150</p>
+
+      <h4>Petitioner</h4>
+      <p class="govuk-!-margin-top-0">David Francis</p>
+
+      <h4>Respondent</h4>
+      <p class="govuk-!-margin-top-0">Susan Francis</p>
+
+      <h3 class="govuk-heading-m  govuk-!-margin-top-6">About the marriage</h3>
+
+      <h4>Who the marriage is between</h4>
+      <p class="govuk-!-margin-top-0">David Francis and Susan Francis (as shown on the marriage certificate)</p>
+
+      <h4>Where the marriage took place</h4>
+      <p class="govuk-!-margin-top-0">London, England, United Kingdom</p>
+
+      <h4>Date of marriage</h4>
+      <p class="govuk-!-margin-top-0">1 January 2014 (4 years 3 months)</p>
+
+      <h3 class="govuk-heading-m  govuk-!-margin-top-6">Why the court can deal with the case (jurisdiction)</h3>
+
+      <p>The applicant and respondent are habitually resident in England and Wales.</p>
+
+      <h4>Other court cases that could affect juristiction</h4>
+      <p class="govuk-!-margin-top-0">There are no other ongoing, completed or abandoned court cases related to the marriage, property or children.</p>
+
+    </div>
+
+  </div>
+
+  <div class="jui-casefile-page-content" data-page="3">
+
+    <div class="jui-casefile-page-head">
+      <img src="/public/images/logo-hmcts.svg" alt="HM Courts &amp; Tribunals Service">
+    </div>
+
+    <div class="jui-casefile-page-body">
+
+      <h2 class="govuk-heading-l">Application for decree nisi</h2>
+
+      <p class="govuk-body">David Francis is applying to the court for a decree of divorce from Susan Francis.</p>
+
+      <h4>Issued</h4>
+      <p class="govuk-!-margin-top-0">18 February 2018</p>
+
+      <h4>Case number</h4>
+      <p class="govuk-!-margin-top-0">BV18D00150</p>
+
+      <h4>Petitioner</h4>
+      <p class="govuk-!-margin-top-0">David Francis</p>
+
+      <h4>Respondent</h4>
+      <p class="govuk-!-margin-top-0">Susan Francis</p>
+
+      <h3 class="govuk-heading-m  govuk-!-margin-top-6">About the marriage</h3>
+
+      <h4>Who the marriage is between</h4>
+      <p class="govuk-!-margin-top-0">David Francis and Susan Francis (as shown on the marriage certificate)</p>
+
+      <h4>Where the marriage took place</h4>
+      <p class="govuk-!-margin-top-0">London, England, United Kingdom</p>
+
+      <h4>Date of marriage</h4>
+      <p class="govuk-!-margin-top-0">1 January 2014 (4 years 3 months)</p>
+
+      <h3 class="govuk-heading-m  govuk-!-margin-top-6">Why the court can deal with the case (jurisdiction)</h3>
+
+      <p>The applicant and respondent are habitually resident in England and Wales.</p>
+
+      <h4>Other court cases that could affect juristiction</h4>
+      <p class="govuk-!-margin-top-0">There are no other ongoing, completed or abandoned court cases related to the marriage, property or children.</p>
+
+    </div>
+
+  </div>
 
 {% endblock %}

@@ -6,7 +6,6 @@
    .jui-casefile {
     display: flex;
     justify-content: space-between;
-    overflow-x: scroll;
   }
 
 
@@ -22,7 +21,8 @@
     background-color: govuk-colour("grey-4");
     box-sizing: border-box;
     padding: govuk-spacing(6);
-    width: 900px;
+    min-width: 900px;
+    overflow-x: scroll;
   }
 
 

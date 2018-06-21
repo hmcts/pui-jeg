@@ -332,7 +332,16 @@ module.exports = [
     status: 'Consider decree nisi',
     reason: 'Separated for 2 years and consent',
     applicationDate: moment('2018-05-09'),
-    documents: '3 Docs (8 pages)',
+    documents: [{
+      id: '1',
+      label: 'Key facts'
+    }, {
+      id: '2',
+      label: 'Applicant'
+    }, {
+      id: '2',
+      label: 'Respondent'
+    }],
     lastAction: moment('2018-05-09'),
     petitioner: '',
     respondent: '',
