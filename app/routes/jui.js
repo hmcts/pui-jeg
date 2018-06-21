@@ -141,12 +141,12 @@ router.get('/app/cases/:id/parties', (req, res) => {
 });
 
 
-router.get('/app/cases/:id/casefile', (req, res) => {
+router.get('/app/cases/:id/documents', (req, res) => {
 	var _case = helpers.getCase(req.session.cases, req.params.id);
-	res.redirect(`/app/cases/${req.params.id}/casefile/${_case.documents[0].id}`);
+	res.redirect(`/app/cases/${req.params.id}/documents/${_case.documents[0].id}`);
 });
 
-router.get('/app/cases/:case_id/casefile/:document_id', (req, res) => {
+router.get('/app/cases/:case_id/documents/:document_id', (req, res) => {
 	var _case = helpers.getCase(req.session.cases, req.params.case_id);
 
 	var pageObject = {
@@ -160,22 +160,6 @@ router.get('/app/cases/:case_id/casefile/:document_id', (req, res) => {
 
 	res.render(templatePath, pageObject);
 });
-
-
-router.get('/app/cases/:id/casefile/b', (req, res) => {
-
-	var _case = helpers.getCase(req.session.cases, req.params.id);
-
-	var pageObject = {
-		casebar: helpers.getCaseBarObject(_case),
-		casenav: helpers.getCaseNavObject(_case),
-		caseActions: helpers.getCaseActions(_case)
-	};
-
-	res.render('app/case/casefileB.html', pageObject);
-
-});
-
 
 router.get('/app/cases/:id/timeline', (req, res) => {
 
