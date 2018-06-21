@@ -1,17 +1,16 @@
 {% extends "layouts/service/base.html" %}
 
-{% block page_title %}Prototype settings{% endblock %}
+{% block pageTitle %}Prototype settings{% endblock %}
 
-{% block content %}
-
-<div class="govuk-width-container">
-
+{% block beforeContent %}
   {{ govukBackLink({
     "text": "Back",
     "href": "/"
   }) }}
+{% endblock %}
 
-  <main role="main" class="govuk-main-wrapper">
+{% block content %}
+
 
     <div class="govuk-grid">
 
@@ -41,10 +40,6 @@
         </form>
 
       </div>
-
-    </div>
-
-  </main>
 
 </div>
 

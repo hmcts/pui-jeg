@@ -12,6 +12,10 @@ $path: "/public/images/";
 // JUI styles
 @import "jui/all";
 
+body {
+  @include govuk-font($size: 16);
+}
+
 mark.comment {
   background-color: govuk-colour(orange);
 }
