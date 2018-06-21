@@ -141,13 +141,13 @@ router.get('/app/cases/:id/parties', (req, res) => {
 });
 
 
-router.get('/app/cases/:id/documents', (req, res) => {
+router.get('/app/cases/:id/casefile', (req, res) => {
 	var _case = helpers.getCase(req.session.cases, req.params.id);
-	res.redirect(`/app/cases/${req.params.id}/documents/${_case.documents[0].id}`);
+	res.redirect(`/app/cases/${req.params.id}/casefile/${_case.documents[0].id}`);
 });
 
-router.get('/app/cases/:id/documents/:num', (req, res) => {
-	var _case = helpers.getCase(req.session.cases, req.params.id);
+router.get('/app/cases/:case_id/casefile/:document_id', (req, res) => {
+	var _case = helpers.getCase(req.session.cases, req.params.case_id);
 
 	var pageObject = {
 		documents: _case.documents,
@@ -156,7 +156,7 @@ router.get('/app/cases/:id/documents/:num', (req, res) => {
 		caseActions: helpers.getCaseActions(_case)
 	};
 
-	var templatePath = `app/case/${helpers.getCaseType(_case).toLowerCase()}/documents/${req.params.num}`;
+	var templatePath = `app/case/${helpers.getCaseType(_case).toLowerCase()}/documents/${req.params.document_id}`;
 
 	res.render(templatePath, pageObject);
 });
