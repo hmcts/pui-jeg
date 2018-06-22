@@ -14,6 +14,9 @@ module.exports = function (env) {
     govDate: function(str) {
       return moment(str).format('D MMMM YYYY');
     },
+    govShortDate: function(str) {
+      return moment(str).format('D MMM YYYY');
+    },
     govTime: function(str) {
       var m = moment(str);
       if(m.minutes() > 0) {

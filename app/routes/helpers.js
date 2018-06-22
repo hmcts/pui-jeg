@@ -142,6 +142,11 @@ function getFormattedDate(m) {
 	return date.format('D MMMM YYYY');
 }
 
+function getFormattedShortDate(m) {
+	var date = moment(m);
+	return date.format('D MMM YYYY');
+}
+
 function getFormattedTime(m) {
 	var date = moment(m);
 	return date.minutes() > 0 ? date.format('h:mma') : date.format('ha');
@@ -182,6 +187,7 @@ exports.removeQuestion = removeQuestion;
 exports.removeItemFromArray = removeItemFromArray;
 exports.getAppellantName = getAppellantName;
 exports.getFormattedDate = getFormattedDate;
+exports.getFormattedShortDate = getFormattedShortDate;
 exports.getFormattedTime = getFormattedTime;
 exports.getRecentEvents = getRecentEvents;
 exports.getEvents = getEvents;
