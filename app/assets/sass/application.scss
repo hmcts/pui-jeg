@@ -14,12 +14,6 @@ $govuk-global-styles: true;
 // JUI styles
 @import "jui/all";
 
-
-
-body {
-  @include govuk-font($size: 16);
-}
-
 .js-enabled .js-hidden { display: none !important; }
 
 mark.comment {

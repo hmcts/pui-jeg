@@ -20,10 +20,10 @@
 
       <div class="govuk-grid-column-one-half">
 
-        <h2 class="gov-heading-s  govuk-!-margin-bottom-2">Case details</h2>
+        <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Case details</h2>
 
         {{ govukTable({
-          "classes": "govuk-!-font-size-16  govuk-!-margin-bottom-7  jui-table  jui-table--fixed",
+          "classes": "govuk-!-margin-bottom-7  jui-table  jui-table--fixed",
           "firstCellIsHeader": true,
           "rows": detailsRows
         }) }}
@@ -32,10 +32,10 @@
 
       <div class="govuk-grid-column-one-half">
 
-        <h2 class="gov-heading-s  govuk-!-margin-bottom-2">Representatives</h2>
+        <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Representatives</h2>
 
         {{ govukTable({
-          "classes": "govuk-!-font-size-16  govuk-!-margin-bottom-7  jui-table  jui-table--fixed",
+          "classes": "govuk-!-margin-bottom-7  jui-table  jui-table--fixed",
           "firstCellIsHeader": true,
           "rows": representativesRows
         }) }}
@@ -48,7 +48,7 @@
 
       <div class="govuk-grid-column-two-thirds">
 
-        <h2 class="gov-heading-s  govuk-!-margin-bottom-2">Recent events</h2>
+        <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Recent events</h2>
 
         {% if recentEvents.length %}
           {{juiTimeline({
@@ -56,8 +56,9 @@
             "isPageSpecific": false,
             "events": recentEvents
           })}}
+          <p class="govuk-body-s"><a href="/app/cases/{{_case.id}}/timeline">View all events</a></p>
         {% else %}
-          <p>No events.</p>
+          <p class="govuk-body-s">No events.</p>
         {% endif %}
       </div>
 

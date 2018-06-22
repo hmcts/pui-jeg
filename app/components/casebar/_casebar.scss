@@ -20,6 +20,10 @@
 
   }
 
+  .jui-casebar__details {
+    @include govuk-font(16);
+  }
+
 
   @include mq($from: tablet) {
 

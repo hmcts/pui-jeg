@@ -14,6 +14,11 @@
 
 }
 
+.jui-questions__subject {
+  @include govuk-font($size: 19, $weight: bold);
+  margin-bottom: 0;
+}
+
 
 .jui-questions__subject a {
   margin-right: govuk-spacing(2);
@@ -26,6 +31,7 @@
 
 
 .jui-questions__meta {
+  @include govuk-font($size: 16);
   color: $govuk-secondary-text-colour;
   margin-bottom: 0;
 
@@ -62,11 +68,12 @@
 ========================================================================== */
 
 .jui-question__meta {
+  @include govuk-font($size: 16);
   color: $govuk-secondary-text-colour;
   margin-top: 0;
 
   @include mq($from: tablet) {
-    margin-bottom: govuk-spacing(6);
+    margin-bottom: govuk-spacing(4);
   }
 
 }

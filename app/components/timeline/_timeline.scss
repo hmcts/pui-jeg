@@ -4,6 +4,7 @@
 
 .jui-timeline {
   position: relative;
+  margin-bottom: govuk-spacing(4);
 
   &:before {
     background-color: govuk-colour("blue");
@@ -18,6 +19,7 @@
 }
 
 .jui-timeline--full {
+  margin-bottom: 0;
   &:before {
     height: calc(100% - 69px);
   }
@@ -43,13 +45,13 @@
 
 
 .jui-timeline__title {
-  @include govuk-font($size: 16, $weight: bold);
+  @include govuk-font($size: 19, $weight: bold);
   display: inline;
 }
 
 
 .jui-timeline__by {
-  @include govuk-font($size: 16);
+  @include govuk-font($size: 19);
   color: $govuk-secondary-text-colour;
   display: inline;
   margin: 0;
@@ -57,7 +59,7 @@
 
 
 .jui-timeline__date {
-  @include govuk-font($size: 16);
+  @include govuk-font($size: 19);
   margin: 0;
 }
 
