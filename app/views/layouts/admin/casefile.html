@@ -25,19 +25,14 @@
             {% endfor %}
           </ul>
         </div>
-
-        <div class="jui-casefile-page editable">
-
-          {% block file_content %}
-          {% endblock %}
-
+        <div class="jui-casefile-document-wrapper">
+          <div class="jui-casefile-page editable">
+            {% block file_content %}{% endblock %}
+          </div>
+        </div>
       </div>
-
-    </div>
-
-  </main>
-
-</div>
+    </main>
+  </div>
 
 {% endblock %}
 

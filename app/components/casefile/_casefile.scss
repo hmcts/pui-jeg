@@ -4,33 +4,32 @@
    ========================================================================== */
 
    .jui-casefile {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 300px auto;
+    max-width: 100%;
   }
 
 
   .jui-casefile-files {
-    background-color: govuk-colour("grey-4");
     box-sizing: border-box;
     padding: 0 govuk-spacing(6) govuk-spacing(6);
-    width: 300px;
   }
 
+  .jui-casefile-document-wrapper {
+    overflow-x: scroll;
+  }
 
   .jui-casefile-page {
     background-color: govuk-colour("grey-4");
     box-sizing: border-box;
     padding: govuk-spacing(6);
-    min-width: 900px;
-    overflow-x: scroll;
+    width: 860px;
   }
-
 
   .jui-casefile-page-head {
     height: 74px;
     margin-bottom: govuk-spacing(7);
   }
-
 
   .jui-casefile-page-content {
     background: govuk-colour(white);
@@ -39,7 +38,7 @@
     margin-top: govuk-spacing(4);
     padding: govuk-spacing(8);
     position: relative;
-    width: 100%;
+    width: 800px;
     min-height: 1100px;
 
     &:first-child {
