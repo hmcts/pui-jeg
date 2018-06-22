@@ -5,14 +5,14 @@
 
    .jui-casefile {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 260px auto;
     max-width: 100%;
   }
 
 
   .jui-casefile-files {
     box-sizing: border-box;
-    padding: 0 govuk-spacing(6) govuk-spacing(6);
+    padding-bottom: govuk-spacing(6);
   }
 
   .jui-casefile-document-wrapper {
