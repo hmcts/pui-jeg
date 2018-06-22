@@ -2,6 +2,8 @@
 // in the govuk frontend toolkit"s url-helpers partial
 $path: "/public/images/";
 
+$govuk-global-styles: true;
+
 // Import GOV.UK Frontend
 @import "govuk-frontend/all";
 
@@ -12,9 +14,13 @@ $path: "/public/images/";
 // JUI styles
 @import "jui/all";
 
+
+
 body {
   @include govuk-font($size: 16);
 }
+
+.js-enabled .js-hidden { display: none !important; }
 
 mark.comment {
   background-color: govuk-colour(orange);

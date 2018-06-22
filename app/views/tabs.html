@@ -1,7 +1,7 @@
 {% extends "layouts/service/base.html" %}
 
 
-{% block body_start %}
+{% block bodyStart %}
 <script>document.body.className = ((document.body.className) ? document.body.className + ' js-tabs-enabled' : 'js-tabs-enabled');</script>
 {% endblock %}
 
@@ -21,13 +21,13 @@
     <div class="govuk-!-margin-bottom-9">
 
       {% set beforeYouStartPanelHtml %}
-        <div class="govuk-prose-scope  govuk-!-pt-r6">
+        <div class="govuk-!-padding-top-6">
 
-          <h2>Before you start</h2>
+          <h2 class="govuk-heading-l">Before you start</h2>
 
           <p>To get your first provisional driving licence online for a car, motorcycle or moped you must:</p>
 
-          <ul>
+          <ul class="govuk-list govuk-list--bullet">
             <li>be a resident of Great Britain &ndash; there&rsquo;s a different service in <a href="">Northern Ireland</a></li>
             <li>meet the minimum age requirement</li>
             <li>meet the <a href="">minimum eyesight requirement</a></li>
@@ -42,9 +42,9 @@
       {% endset %}
 
       {% set needToKnowPanelHtml %}
-        <div class="govuk-prose-scope  govuk-!-pt-r6">
-          <h2>Need to know</h2>
-          <ul>
+        <div class="govuk-!-padding-top-6">
+          <h2 class="govuk-heading-l">Need to know</h2>
+          <ul class="govuk-list govuk-list--bullet">
             <li>proof of identification required</li>
             <li>3 years of address details required</li>
             <li>debit or credit card required</li>
@@ -53,15 +53,15 @@
       {% endset %}
 
       {% set waysToApplyPanelHtml %}
-        <div class="govuk-prose-scope  govuk-!-pt-r6">
+        <div class="govuk-!-padding-top-6">
 
-          <h2>Ways to apply</h2>
+          <h2 class="govuk-heading-l">Ways to apply</h2>
 
           <p>You can apply by post by completing a D1 application form, which you can get from the <a href="">DVLA form ordering service</a> or from a Post Office.</p>
 
           <p>You&rsquo;ll also need to include:</p>
 
-          <ul>
+          <ul class="govuk-list govuk-list--bullet">
             <li>original documentation confirming your identity</li>
             <li>a colour <a href="">passport&ndash;style photograph</a></li>
             <li>the fee of &pound;50 by cheque or postal order payable to DVLA (do not send cash)</li>
