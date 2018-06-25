@@ -276,10 +276,10 @@ module.exports = [
     applicationDate: moment('2018-05-09'),
     documents: [{
       id: '1',
-      label: 'Personal Independence Payment'
+      label: 'Key facts'
     }, {
       id: '2',
-      label: 'Decision Notice'
+      label: 'Application for decree nisi'
     }],
     lastAction: moment('2018-05-09'),
     events: [
