@@ -7,7 +7,7 @@ module.exports = [
   {
     id: 'LU17C87541',
     typeId: types.publiclaw.id,
-    status: 'Final hearing',
+    status: 'Interim Hearing',
     applicationDate: moment('2017-11-20 13:01'),
     lastAction: moment('2018-01-25 16:48'),
     court: 'Luton County Court and Family Court',
@@ -39,27 +39,39 @@ module.exports = [
     events: [
       {
         id: uuid(),
-        date: moment('2017-11-20 13:01'),
-        title: 'New Direct Lodgement Registration',
-        by: 'DLC Admin'
+        date: moment('2018-05-25 12:01'),
+        title: 'Draft care order created',
+        by: 'Luton Local Authority Legal Representative (Enda Smith)'
       },
       {
         id: uuid(),
-        date: moment('2017-12-05 09:10'),
-        title: 'Appeal marked as compliant',
-        by: 'Tribunal Case Worker – Emily Oliver'
+        date: moment('2018-05-22 08:00'),
+        title: 'Directions completed',
+        by: 'system update'
       },
       {
         id: uuid(),
-        date: moment('2018-01-25 16:48'),
-        title: 'Response submitted',
-        by: 'DWP Appeals Officer'
+        date: moment('2018-05-21 08:00'),
+        title: 'Interim hearing scheduled for...',
+        by: 'system update'
+      },
+      {
+        id: uuid(),
+        date: moment('2018-05-20 12:42'),
+        title: 'Standard directions issued',
+        by: 'Judge Prita Shah'
+      },
+      {
+        id: uuid(),
+        date: moment('2018-05-19 15:12'),
+        title: 'Application for care order submitted',
+        by: 'Luton Borough Council (Enda Smith)'
       }
     ],
     parties: [
       {
         type: 'Applicant',
-        org: 'Luton County Court',
+        org: 'Luton Borough Council',
       },
       {
         type: 'Respondent',
