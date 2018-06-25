@@ -15,10 +15,10 @@ module.exports = [
     requirements: 'Assisted Digital support requested',
     documents: [{
       id: '1-w',
-      label: 'Personal Independence Payment'
+      label: 'Personal independence payment'
     }, {
       id: '2-w',
-      label: 'Decision Notice'
+      label: 'Decision notice'
     }],
     events: [
       {
@@ -134,10 +134,10 @@ module.exports = [
     typeId: types.pip.id,
     documents: [{
       id: '1',
-      label: 'Personal Independence Payment'
+      label: 'Personal independence payment'
     }, {
       id: '2',
-      label: 'Decision Notice'
+      label: 'Decision notice'
     }],
     rounds: [/*{
       id: uuid(),
