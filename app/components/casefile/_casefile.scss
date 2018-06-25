@@ -87,4 +87,6 @@
 
 .jui-casefile-list__link[aria-current] {
   color: govuk-colour(black);
+  font-weight: bold;
+  text-decoration: none;
 }
