@@ -30,14 +30,12 @@ function viewCaseSummary(req, res) {
 		recentEvents: helpers.getRecentEvents(_case)
 	};
 
-	// Case details
 	pageObject.detailsRows.push([{ html: 'Parties' }, {html: helpers.getPartiesLine(_case)}]);
 	pageObject.detailsRows.push([{ html: 'Case number' }, {html: _case.id}]);
 	pageObject.detailsRows.push([{ html: 'Case type' }, {html: helpers.getCaseTypeLabel(_case)}]);
-	pageObject.detailsRows.push([{ html: 'Tribunal centre' }, {html: _case.tribunalCentre}]);
-	pageObject.detailsRows.push([{ html: 'Additional requirements' }, {html: _case.requirements}]);
+	pageObject.detailsRows.push([{ html: 'Court' }, {html: _case.court}]);
 
-	res.render('app/case/pip/summary', pageObject);
+	res.render('app/case/publiclaw/summary', pageObject);
 
 }
 
@@ -51,10 +49,25 @@ function viewMakeDecision(req, res) {
 		caseActions: getCaseActions(_case)
 	};
 
-	res.render('app/case/pip/make-decision', pageObject);
+	res.render('app/case/publiclaw/make-decision', pageObject);
+
+}
+
+
+function viewListForHearing(req, res) {
+
+	var _case = helpers.getCase(req.session.cases, req.params.id);
+
+	var pageObject = {
+		casebar: helpers.getCaseBarObject(_case),
+		caseActions: getCaseActions(_case)
+	};
+
+	res.render('app/case/publiclaw/list-for-hearing', pageObject);
 
 }
 
 
 exports.viewCaseSummary = viewCaseSummary;
 exports.viewMakeDecision = viewMakeDecision;
+exports.viewListForHearing = viewListForHearing;
