@@ -337,10 +337,7 @@ module.exports = [
       label: 'Key facts'
     }, {
       id: '2',
-      label: 'Applicant'
-    }, {
-      id: '2',
-      label: 'Respondent'
+      label: 'Application for decree nisi'
     }],
     lastAction: moment('2018-05-09'),
     petitioner: '',
