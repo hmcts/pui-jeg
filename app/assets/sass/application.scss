@@ -22,6 +22,16 @@ html {
   display: none !important; 
 }
 
+
+// Shame
+.jui-\!\-align-right {
+
+  @include mq($from: tablet) {
+    float: right;
+  }
+
+}
+
 mark.comment {
   background-color: govuk-colour(orange);
 }

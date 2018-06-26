@@ -23,19 +23,19 @@
         <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Case details</h2>
 
         {{ govukTable({
-          "classes": "jui-table  jui-table--fixed  govuk-!-margin-bottom-7",
+          "classes": "jui-table  jui-table--fixed  jui-table--summary  govuk-!-margin-bottom-7",
           "firstCellIsHeader": true,
           "rows": detailsRows
         }) }}
 
-        <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Parties and representatives</h2>
+        {# <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Parties and representatives</h2>
 
         {{ govukTable({
           "classes": "jui-table  jui-table--fixed  govuk-!-margin-bottom-7",
           "firstCellIsHeader": false,
           "head": [
             {
-              text: "Role"
+              text: ""
             },
             {
               text: "Name"
@@ -46,7 +46,12 @@
           ],
           "rows": [
             [
-              {"text": "Farther"},
+              {"text": "Children"},
+              {"html": "Mary Lou (3 yrs 6 mths)"},
+              {"text": "-"}
+            ],
+            [
+              {"text": "Father"},
               {"text": "Brian Martins"},
               {"text": "John Charles"}
             ],
@@ -66,6 +71,36 @@
               {"text": "Michelle Higgins"}
             ]
           ]
+        })}} #}
+
+
+        <h2 class="govuk-heading-m  govuk-!-margin-bottom-2">Parties and representatives</h2>
+
+        {{ govukTable({
+          "classes": "jui-table  jui-table--fixed  jui-table--summary  govuk-!-margin-bottom-7",
+          "firstCellIsHeader": true,
+          "rows": [
+            [
+              {"text": "Children"},
+              {"html": "Mary Lou (3 yrs 6 mths)"}
+            ],
+            [
+              {"text": "Father"},
+              {"text": "Brian Martins represented by John Charles"}
+            ],
+            [
+              {"text": "Mother"},
+              {"text": "Jane Martins represented by Tim Dalton"}
+            ],
+            [
+              {"text": "Local authority"},
+              {"text": "Steve Walters represented by Enda Smith"}
+            ],
+            [
+              {"text": "Cafcass"},
+              {"text": "Sarah Dalton represented by Michelle Higgins"}
+            ]
+          ]
         })}}
 
       </div>
@@ -75,6 +110,7 @@
         <h2 class="govuk-heading-m  govuk-!-margin-bottom-4">Recent events</h2>
 
         {% if recentEvents.length %}
+
           {{juiTimeline({
             "isPageSpecific": false,
             "events": recentEvents

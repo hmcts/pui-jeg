@@ -73,19 +73,19 @@
 
 
 .jui-casefile-list__link {
-  background-image: url(#{$jui-assets-path}icon-document.svg);
+  background-image: url(#{$jui-assets-path}icon-folder.svg);
   background-repeat: no-repeat;
-  background-size: 15px 20px;
+  background-size: 20px 16px;
   background-position: 0 10px;
-
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 26px;
+  padding-left: 30px;
 }
 
 
 .jui-casefile-list__link[aria-current] {
+  background-image: url(#{$jui-assets-path}icon-folder-open.svg);
   color: govuk-colour(black);
   font-weight: bold;
   text-decoration: none;

@@ -34,6 +34,7 @@ function viewCaseSummary(req, res) {
 	pageObject.detailsRows.push([{ html: 'Case number' }, {html: _case.id}]);
 	pageObject.detailsRows.push([{ html: 'Case type' }, {html: helpers.getCaseTypeLabel(_case)}]);
 	pageObject.detailsRows.push([{ html: 'Court' }, {html: _case.court}]);
+	pageObject.detailsRows.push([{ html: 'Hearings scheduled' }, {html: '<ul class="govuk-list govuk-!-margin-bottom-0"><li>1st July 2018 (case management)</li><li>29th August 2018 (interim resolution)</li><li>2nd October 2018 (final)</li></ul>'}]);
 
 	res.render('app/case/publiclaw/summary', pageObject);
 

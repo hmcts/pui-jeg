@@ -8,8 +8,8 @@ module.exports = [
     id: 'LU17C87541',
     typeId: types.publiclaw.id,
     status: 'Interim Hearing',
-    applicationDate: moment('2017-11-20 13:01'),
-    lastAction: moment('2018-01-25 16:48'),
+    applicationDate: moment('2018-06-05 13:01'),
+    lastAction: moment('2018-06-26 12:01'),
     court: 'Luton County Court and Family Court',
     documents: [{
       id: '1',
@@ -39,31 +39,31 @@ module.exports = [
     events: [
       {
         id: uuid(),
-        date: moment('2018-05-25 12:01'),
+        date: moment('2018-06-26 12:01'),
         title: 'Draft care order created',
-        by: 'Luton Local Authority Legal Representative (Enda Smith)'
+        by: 'Luton Borough Council (Enda Smith)'
       },
       {
         id: uuid(),
-        date: moment('2018-05-22 08:00'),
+        date: moment('2018-06-26 08:00'),
         title: 'Directions completed',
-        by: 'system update'
+        by: 'System update'
       },
       {
         id: uuid(),
-        date: moment('2018-05-21 08:00'),
-        title: 'Interim hearing scheduled for...',
-        by: 'system update'
+        date: moment('2018-06-08 08:18'),
+        title: 'Case management hearing scheduled',
+        by: 'Scheduling and listings'
       },
       {
         id: uuid(),
-        date: moment('2018-05-20 12:42'),
+        date: moment('2018-06-07 12:42'),
         title: 'Standard directions issued',
-        by: 'Judge Prita Shah'
+        by: 'Terry Hall'
       },
       {
         id: uuid(),
-        date: moment('2018-05-19 15:12'),
+        date: moment('2018-06-05 13:01'),
         title: 'Application for care order submitted',
         by: 'Luton Borough Council (Enda Smith)'
       }
